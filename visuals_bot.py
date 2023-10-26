@@ -1,6 +1,6 @@
 import discord
 import os
-from visual_generator import *
+from piechart import PieChart, BarChart
 
 intents = discord.Intents.all()
 client = discord.Client(intents=intents)
@@ -17,9 +17,8 @@ async def on_message(message):
         return
 
     if message.content.startswith('/Activity'):
-        activities, members = await get_user_activities(message.guild)
-        create_pie_chart(activities, message.guild, members)
-        await send_visual(message.channel)
+        visual = PieChart(message.channel).image
+        await message.channel.send(file=discord.File(fp=visual, filename=f'{message.guild.name}.png'))
 
 
 token = os.getenv("TOKEN")
