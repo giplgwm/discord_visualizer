@@ -21,4 +21,6 @@ async def on_message(message):
 
 
 token = "YOUR-TOKEN-HERE"
+if token == "YOUR-TOKEN-HERE": # If no token entered
+    token = os.getenv('TOKEN')
 client.run(token)
