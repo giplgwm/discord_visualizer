@@ -1,6 +1,6 @@
 import discord
 import os
-from piechart import PieChart, BarChart
+from piechart import PieChart
 
 intents = discord.Intents.all()
 client = discord.Client(intents=intents)
