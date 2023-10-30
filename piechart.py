@@ -1,8 +1,7 @@
+"""This module defines the charts that will be sent by the discord bot."""
 from io import BytesIO
 import discord
 import plotly.express as px
-
-"""This module defines the charts that will be sent by the discord bot."""
 
 
 class ActivityChart:
@@ -10,6 +9,8 @@ class ActivityChart:
     chart types."""
 
     def __init__(self, channel: discord.TextChannel):
+        """Initialize variables and create the visual. At the end of this method there should be a .image
+        and .fig variable accessible through the object"""
         self.channel = channel
         self.guild = channel.guild
         self._get_guild_data()
@@ -49,9 +50,6 @@ class PieChart(ActivityChart):
     """Represents a Pie Chart for a given discord guild's activity.
     Use the image attribute to access a bytesIO object or .fig for the plotly figure."""
 
-    def __init__(self, channel: discord.TextChannel):
-        super().__init__(channel)
-
     def _create_visual(self):
         """Create a pie chart representing what the members of a guild are playing. Make an annotation to show
                 people who aren't playing anything"""
@@ -84,9 +82,6 @@ class PieChart(ActivityChart):
 class BarChart(ActivityChart):
     """Create a pie chart representing what the members of a guild are playing. Make an annotation to show
             people who aren't playing anything"""
-
-    def __init__(self, channel):
-        super().__init__(channel)
 
     def _create_visual(self):
         """Create a pie chart representing what the members of a guild are playing. Make an annotation to show
