@@ -35,9 +35,13 @@ class ActivityChart:
     def _create_visual(self):
         """Create a visual representation of the data gathered. Left empty in parent class, this is the only method
         that must be added in a child class to define the type of chart created."""
+        self.fig = None
 
     def _im_to_bytesio(self):
         """Turn the fig created into a BytesIO object, for passing into discord.File()"""
+        if self.fig is None:
+            raise NotImplementedError("You should not be trying to use this method in ActivityChart, use PieChart."
+                                      "ActivityChart is only for extending functionality with other chart types.")
         self.image = BytesIO(self.fig.to_image(format='PNG'))
 
 

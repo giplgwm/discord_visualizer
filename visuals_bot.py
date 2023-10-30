@@ -5,6 +5,7 @@ from piechart import PieChart, BarChart
 intents = discord.Intents.all()
 client = discord.Client(intents=intents)
 
+
 @client.event
 async def on_ready():
     print(f'We have logged in as {client.user}')
@@ -20,7 +21,7 @@ async def on_message(message):
         await message.channel.send(file=discord.File(fp=visual, filename=f'{message.guild.name}.png'))
 
 
-token = "YOUR-TOKEN-HERE"
-if token == "YOUR-TOKEN-HERE": # If no token entered
-    token = os.getenv('TOKEN')
-client.run(token)
+TOKEN = "YOUR-TOKEN-HERE"
+if TOKEN == "YOUR-TOKEN-HERE":  # If no token entered
+    TOKEN = os.getenv('TOKEN')
+client.run(TOKEN)
