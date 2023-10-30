@@ -45,13 +45,13 @@ To use the `visuals_bot.py` program, follow these steps:
 
 4. The bot will respond with the visual representation, showing what members are playing and how many are not engaged in any activity.
 
-To use add PieChart to your own bot:
+To add the PieChart feature to your own bot:
 
 1. Copy `piechart.py` to your project folder.
 
 2. `from piechart import PieChart`
 
-3. To send a piechart from your bot simply create a Piechart object by passing in a TextChannel (ie the channel the command was used in), then you can use the .image attribute as simply as:
+3. To send a piechart from your bot simply create a Piechart object by passing in a TextChannel (e.g. the channel the command was used in), then you can use the .image attribute as simply as:
    ```python
    @client.event
    async def on_message(message):
