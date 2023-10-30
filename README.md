@@ -31,7 +31,7 @@ Before using `visuals_bot.py`, make sure you have the following dependencies ins
    token = "YOUR_BOT_TOKEN_HERE"
    ```
 
-4. Customize the chart types and visuals as needed by modifying the `PieChart` or `BarChart` classes in `piechart.py`, or extending `ActivityChart` yourself with a different chart type. The `ActivityChart` class serves as the base for creating different types of charts, just extend it and define a _create_visual() that defines a self.fig attribute, then use it the same was as shown here.
+4. Customize the chart types and visuals as needed by modifying the `PieChart` or `BarChart` classes in `piechart.py`, or extending `ActivityChart` yourself with a different chart type. The `ActivityChart` class serves as the base for creating different types of charts, just create a child class and define the method `_create_visual(self)` that defines `self.fig` as a plotly figure, then use it the same was as shown here with PieChart.
 
 ## Usage
 
