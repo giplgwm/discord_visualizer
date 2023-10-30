@@ -2,6 +2,9 @@ import discord
 import os
 from piechart import PieChart
 
+"""This module defines a Discord bot that will read guild data and send back a visual representation."""
+
+
 intents = discord.Intents.all()
 client = discord.Client(intents=intents)
 
