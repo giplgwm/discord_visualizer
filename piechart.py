@@ -80,11 +80,10 @@ class PieChart(ActivityChart):
 
 
 class BarChart(ActivityChart):
-    """Create a pie chart representing what the members of a guild are playing. Make an annotation to show
-            people who aren't playing anything"""
+    """Just an example to show how you could make other types of charts py extending the ActivityChart class."""
 
     def _create_visual(self):
-        """Create a pie chart representing what the members of a guild are playing. Make an annotation to show
+        """Create a bar chart representing what the members of a guild are playing. Make an annotation to show
                 people who aren't playing anything"""
         self.members_with_no_activity = self.activities['None']
         del self.members_in_each[0]
