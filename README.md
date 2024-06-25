@@ -4,6 +4,8 @@
 
 `visuals_bot.py` is a Python program that creates visual representations of Discord server member activity using pie charts. It is designed to be used as a Discord bot, and it generates and sends these visual representations in response to user commands. This README provides information on how to use the bot, its structure, and how to customize it for your needs.
 
+![Preview Image](discord-preview.png "Preview Image")
+
 ## Features
 
 - Creates pie charts that visualize Discord server member activity.
